@@ -1,0 +1,11 @@
+AuthName "Please Input your Account & password!"
+##AuthType Basic
+##AuthUserFile /var/www/html/everest/.htpasswd
+##require valid-user
+
+RewriteEngine On
+RewriteBase /tool
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ index.php?$1& [QSA,L]
+###php_value session.save_path "/var/lib/php/sessions/memocard_session"
