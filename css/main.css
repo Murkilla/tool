@@ -1,0 +1,76 @@
+.login-btn {
+  width: 185px;
+  height: 60px;
+  background: url('/admin/imgs/btn/btn_004_n.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  font-family: NotoBlod;
+  font-size: 25px;
+  line-height: 60px;
+  color: #fff;
+  border: none;
+  box-sizing: border-box;
+  position: relative;
+	cursor:pointer;
+}
+.login-btn:hover {
+  background: url('/admin/imgs/btn/btn_004_h.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.login-btn:active {
+  background: url('/admin/imgs/btn/btn_004_s.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.login-btn:disabled {
+  color: #226a96;
+}
+.login-btn > .text {
+  display: inline-block;
+}
+
+
+.fb-btn {
+  width: 185px;
+  height: 60px;
+  background: url('/admin/imgs/btn/btn_004_n.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  font-family: NotoBlod;
+  font-size: 25px;
+  line-height: 60px;
+  color: #fff;
+  border: none;
+  box-sizing: border-box;
+  position: relative;
+	cursor:pointer;
+  top: 3px;
+}
+.fb-btn:hover {
+  background: url('/admin/imgs/btn/btn_004_h.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.fb-btn:active {
+  background: url('/admin/imgs/btn/btn_004_s.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.fb-btn:disabled {
+  color: #226a96;
+}
+.fb-btn > .icon {
+  display: inline-block;
+  width: 42px;
+  height: 42px;
+  background: url('/admin/imgs/img/img_003.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+  top: 8px;
+  left: -10px;
+}
+.fb-btn > .text {
+  display: inline-block;
+}
