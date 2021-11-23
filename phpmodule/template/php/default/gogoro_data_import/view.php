@@ -223,17 +223,17 @@
                         cache: false,
                         processData: false,
                         beforeSend:function(){
-                        $("#loadingImg").show();
+                        	App.blockUI();
                         },
                         success:function(output){
-                        $("#loadingImg").hide();
+                        		App.unblockUI();
                             console.log(output.log);
                             alert(output.msg);
                         },  
                         error: function(err){
-                        $("#loadingImg").hide();
-                        console.log(err.responseText);
-                        alert(err.responseText);
+                        		App.unblockUI();
+                        		console.log(err.responseText);
+                        		alert(err.responseText);
                         }   
                     });
                 }
