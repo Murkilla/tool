@@ -2,7 +2,6 @@ var res_regex = /\[AJAX_RES_START\](.+?)\[AJAX_RES_END\]/;
 
 function showConfirm(title,content,type,cb){
     if(type == 1){
-        console.log(content);
         bootbox.dialog({
                     message: content,
                     title: title,
@@ -36,7 +35,6 @@ function showConfirm(title,content,type,cb){
 }
 
 function showAddDialog(title,res){
-    console.log(res);
     showConfirm(title,res,2,function(){
         var form = $('#add-form');
         var formData = new FormData($('#add-form')[0]);

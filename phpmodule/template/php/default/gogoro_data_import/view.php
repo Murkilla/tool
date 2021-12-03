@@ -197,24 +197,21 @@
                 success:function(output){
                     App.unblockUI();
                     console.log(output.log);
-                    alert(output.msg);
+                    showConfirm('系統訊息',output.msg,1);
                 },  
                 error: function(err){
                     App.unblockUI();
                     console.log(err.responseText);
-                    alert(err.responseText);
+                    showConfirm('系統訊息',err.responseText,1);
                 }   
                 });
             });
             $('#send').on('click',function(){
-                var check = confirm("是否確定要清除?");
-                if(!check){
-                    return;
-                }else{
+                showConfirm('系統訊息',"是否確定要清除?",2,function(){
                     var form = $('#form2')[0];
                     var formData = new FormData(form);
                     $.ajax({  
-                        url: $(this).data("url"),
+                        url: $('#send').data("url"),
                         dataType:"json",
                         data: formData,
                         type:'POST',
@@ -223,20 +220,21 @@
                         cache: false,
                         processData: false,
                         beforeSend:function(){
-                        	App.blockUI();
+                                App.blockUI();
                         },
                         success:function(output){
-                        		App.unblockUI();
-                            console.log(output.log);
-                            alert(output.msg);
+                                App.unblockUI();
+                                console.log(output.log);
+                                showConfirm('系統訊息',output.msg,1);
+                                //alert(output.msg);
                         },  
                         error: function(err){
-                        		App.unblockUI();
-                        		console.log(err.responseText);
-                        		alert(err.responseText);
+                                App.unblockUI();
+                                console.log(err.responseText);
+                                showConfirm('系統訊息',err.responseText,1);
                         }   
                     });
-                }
+                });
             });
 
             // $('#btn-add').click(function(){
